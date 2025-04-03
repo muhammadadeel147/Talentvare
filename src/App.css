@@ -1,0 +1,880 @@
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayXXThin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayXXThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayXThin.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayXThinItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayThin.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayThinItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayLight.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayLightItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayRomanItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayMediumItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayBoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayBlack.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Haas Display';
+  src: url('./assets/fonts/NeueHaasDisplayBlackItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Neue Haas Display', sans-serif !important;
+  background-color: #F4F4F4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Neue Haas Display', sans-serif !important; 
+}
+
+.job-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 4rem;
+  background-color: #FFFFFF;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 2.2rem;
+  color: #737A91;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Neue Haas Display',
+}
+
+.nav-links li.active {
+  color: #0154AA;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Neue Haas Display',
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+/* Ensure the mobile search field is always visible */
+.mobile-search {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Ensure the input field is fully visible */
+.mobile-search .search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  background-color: #F6F9FF;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-search input {
+  flex: 1;
+  padding: 0.5rem 2.5rem; /* Ensure space for the icon */
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background-color: #F6F9FF;
+  
+}
+
+/* Ensure search icon is properly positioned */
+.mobile-search .search-icon {
+  position: absolute;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #737A91;
+  font-weight: 500;
+}
+
+.mobile-menu li.active {
+  color: #0154AA;
+  font-weight: 600;
+}
+
+.search-box {
+  position: relative;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 0.5rem 1rem 0.5rem 2.5rem; /* Left padding for icon space */
+  border: transparent;
+  border-radius: 8px;
+  outline: none;
+  width: 261px;
+  height: 39px;
+  background-color: #F6F9FF;
+}
+.search-box input::placeholder {
+  font-family: "Neue Haas Display", sans-serif; /* Custom font */
+  font-size: 14px;
+  font-family: 500; /* Adjust placeholder font size */
+  color: #737A91; /* Placeholder text color */
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; /* Adjust icon size */
+  height: 16px;
+  fill: #737A91;
+  pointer-events: none; /* Prevents clicking on icon */
+}
+
+.resume-builder-btn {
+  background-color: #0154AA;
+  color: #FFFFFF;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 1.5rem;
+  width: 147px;
+  height: 39px;
+  font-family: 'Neue Haas Display';
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  padding: 1.5rem 4rem;
+  /* padding: 1.5rem; */
+  gap: 2rem;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 350px;
+}
+
+.profile-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.banner {
+  position: relative;
+  height: 100px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-pic-large {
+  position: absolute;
+  bottom: -40px;
+  left: 130px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  
+}
+
+.profile-pic-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  padding: 3rem 1.5rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.profile-info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+  margin-bottom: 0.5rem;
+}
+
+.job-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+  margin-bottom: 0.5rem;
+}
+
+.locations {
+  font-size: 12px;
+  font-weight: 500;
+  color: #585D6E;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+}
+
+.profile-stats {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom:  1px solid #E9ECEF;
+}
+
+.stat:last-child {
+  margin-bottom: 0;
+  border-bottom: none; 
+  padding-bottom: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+}
+
+.stat-value {
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+  font-size: 16px;
+  color: #0154AA;
+  font-weight: 500;
+}
+
+.calendar-section {
+  padding: 1rem 1.2rem 1rem 0.9rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+}
+.downarrow{
+  margin-top: 0.6rem;
+}
+
+.upcoming {
+  font-size: 14px;
+  font-weight: 500;
+  color: #737A91;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+}
+
+/* Main Area */
+.main-area {
+  flex: 1;
+}
+
+.welcome-section {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+
+}
+
+.welcome-section h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+  margin-bottom: 0.5rem;
+}
+.welcome-section span {
+  color: #0154AA;
+}
+
+.welcome-section p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #585D6E;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+}
+
+.search-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #FFFFFF
+}
+
+.search-inputs {
+  display: flex;
+  gap: 1rem;
+}
+.search-section input::placeholder {
+  font-family: "Neue Haas Display", sans-serif; /* Custom font */
+  font-size: 14px;
+  font-family: 500; /* Adjust placeholder font size */
+  color: #585D6E; /* Placeholder text color */
+}
+.input-group.main-search input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent; /* Ensure no background interference */
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group.main-search {
+  flex: 2;
+}
+.input-group.location-dropdown select,
+.input-group.job-type-dropdown select {
+  border: none; /* Remove all borders */
+  border-left: 1px solid #ccc; /* Add only right-side border */
+  padding-right: 10px; /* Add some spacing for better look */
+  background-color: transparent; /* Ensure it blends well */
+  outline: none; /* Remove outline on focus */
+  appearance: none; /* Remove default browser styling */
+}
+
+.input-group.location-dropdown,
+.input-group.job-type-dropdown {
+  flex: 1;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.input-group select {
+  appearance: none;
+  background-image: url("./assets/images/downarrow2.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  background-color: #0154AA;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  width: 140px;
+  height: 37px;
+}
+
+
+.filter-tags {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.filter-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #737A91;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+  margin-right: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 15px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #495057;
+  border: 1px solid  #737A91;
+  height: 30px;
+  min-width: 77px;
+  max-width: 121px;
+  line-height: 100%;
+}
+
+/* Jobs Section */
+
+
+.section-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+}
+
+.see-all {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0154AA;
+  line-height: 100% ;
+  font-family: 'Neue Haas Display';
+  text-underline-offset: 4px; 
+}
+
+.job-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(182px, 1fr));
+  gap: 1.5rem;
+}
+
+.job-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding: 16px; 
+}
+
+.promoted-tag {
+  padding-bottom: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 100% ;
+}
+
+.job-card-content {
+
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-details h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 100% ;
+  margin-bottom: 0.25rem;
+}
+
+.company-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 100% ;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.location, .posted-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 12px;
+  font-weight: 500;
+  color: #585D6E;
+  line-height: 100% ;
+}
+.applicant{
+    color: #0154AA;
+}
+.job-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  gap: 0.5rem;
+}
+
+.apply-btn {
+  flex: 1;
+  background-color: #0154AA;
+  color: white;
+  padding: 0.625rem 1.875rem;
+  border: none;
+  border-radius: 6.13px;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+ max-width: 115px !important;
+  height: 34px;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recommended-jobs {
+margin-top: 30px;
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    flex: 0 0 auto;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .profile-card {
+    max-width: 100%;
+  }
+  
+}
+
+@media (max-width: 992px) {
+  .search-inputs {
+    flex-direction: column;
+  }
+  
+  .job-cards {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  .profile-pic{
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .search-box {
+    display: none;
+  }
+  
+  .main-content {
+    padding: 1rem 1.5rem;
+  }
+  
+  .job-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .resume-builder-btn {
+    display: none;
+  }
+
+  /* Add Resume Builder to mobile menu */
+  .mobile-resume-builder {
+    display: block;
+    margin: 1rem 0;
+    background-color: #0154AA;
+    color: #FFFFFF;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.1rem;
+  }
+  
+  .job-title {
+    font-size: 0.8rem;
+  }
+  
+  .welcome-section h1 {
+    font-size: 1.25rem;
+  }
+
+  .job-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .tags {
+    flex-wrap: wrap;
+  }
+
+  .job-card {
+    padding: 12px;
+  }
+
+  .job-actions {
+    flex-direction: column;
+  }
+
+  .apply-btn {
+    width: 100%;
+    max-width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .save-btn {
+    align-self: flex-end;
+  }
+
+  .profile-pic-large {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
