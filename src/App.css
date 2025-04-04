@@ -261,6 +261,7 @@ body {
 }
 
 .search-box input {
+  border: transparent;
   padding: 0.5rem 1rem 0.5rem 2.5rem; 
   border-radius: 8px;
   outline: none;
