@@ -134,7 +134,6 @@ body {
   align-items: center;
   padding: 0.8rem 4rem;
   background-color: #FFFFFF;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -198,7 +197,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 99;
 }
-/* Ensure the mobile search field is always visible */
 .mobile-search {
   display: flex;
   justify-content: center;
@@ -206,7 +204,6 @@ body {
   padding: 1rem 0;
 }
 
-/* Ensure the input field is fully visible */
 .mobile-search .search-box {
   display: flex;
   align-items: center;
@@ -220,7 +217,7 @@ body {
 
 .mobile-search input {
   flex: 1;
-  padding: 0.5rem 2.5rem; /* Ensure space for the icon */
+  padding: 0.5rem 2.5rem; 
   border: none;
   outline: none;
   width: 100%;
@@ -228,8 +225,6 @@ body {
   background-color: #F6F9FF;
   
 }
-
-/* Ensure search icon is properly positioned */
 .mobile-search .search-icon {
   position: absolute;
   left: 12px;
@@ -266,8 +261,7 @@ body {
 }
 
 .search-box input {
-  padding: 0.5rem 1rem 0.5rem 2.5rem; /* Left padding for icon space */
-  border: transparent;
+  padding: 0.5rem 1rem 0.5rem 2.5rem; 
   border-radius: 8px;
   outline: none;
   width: 261px;
@@ -275,10 +269,10 @@ body {
   background-color: #F6F9FF;
 }
 .search-box input::placeholder {
-  font-family: "Neue Haas Display", sans-serif; /* Custom font */
+  font-family: "Neue Haas Display", sans-serif; 
   font-size: 14px;
-  font-family: 500; /* Adjust placeholder font size */
-  color: #737A91; /* Placeholder text color */
+  font-family: 500; 
+  color: #737A91; 
 }
 
 .search-icon {
@@ -286,10 +280,10 @@ body {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px; /* Adjust icon size */
+  width: 16px; 
   height: 16px;
   fill: #737A91;
-  pointer-events: none; /* Prevents clicking on icon */
+  pointer-events: none; 
 }
 
 .resume-builder-btn {
@@ -311,7 +305,6 @@ body {
 .main-content {
   display: flex;
   padding: 1.5rem 4rem;
-  /* padding: 1.5rem; */
   gap: 2rem;
 }
 
@@ -455,7 +448,6 @@ body {
   font-family: 'Neue Haas Display';
 }
 
-/* Main Area */
 .main-area {
   flex: 1;
 }
@@ -499,16 +491,16 @@ body {
   gap: 1rem;
 }
 .search-section input::placeholder {
-  font-family: "Neue Haas Display", sans-serif; /* Custom font */
+  font-family: "Neue Haas Display", sans-serif; 
   font-size: 14px;
-  font-family: 500; /* Adjust placeholder font size */
-  color: #585D6E; /* Placeholder text color */
+  font-family: 500; 
+  color: #585D6E; 
 }
 .input-group.main-search input {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  background-color: transparent; /* Ensure no background interference */
+  background-color: transparent; 
 }
 
 .input-group {
@@ -520,12 +512,12 @@ body {
 }
 .input-group.location-dropdown select,
 .input-group.job-type-dropdown select {
-  border: none; /* Remove all borders */
-  border-left: 1px solid #ccc; /* Add only right-side border */
-  padding-right: 10px; /* Add some spacing for better look */
-  background-color: transparent; /* Ensure it blends well */
-  outline: none; /* Remove outline on focus */
-  appearance: none; /* Remove default browser styling */
+  border: none; 
+  border-left: 1px solid #ccc; 
+  padding-right: 10px; 
+  background-color: transparent; 
+  outline: none; 
+  appearance: none;
 }
 
 .input-group.location-dropdown,
@@ -602,9 +594,6 @@ body {
   line-height: 100%;
 }
 
-/* Jobs Section */
-
-
 .section-header {
   display: flex;
   gap: 20px;
@@ -650,10 +639,6 @@ body {
   font-weight: 600;
   color: #333333;
   line-height: 100% ;
-}
-
-.job-card-content {
-
 }
 
 .job-header {
@@ -739,36 +724,93 @@ body {
 .recommended-jobs {
 margin-top: 30px;
 }
+
+
 /* Responsive Styles */
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
+  .navbar {
+    padding: 0.8rem 2rem; 
+  }
+  .search-box input {
+    width: 200px;
+  }
+  .nav-links li {
+    margin-right: 1.5rem;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .nav-links li.active {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .main-content {
+    padding: 1.5rem 2rem;
+  }
+  .profile-pic-large {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sidebar {
+    flex: 0 0 270px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .nav-links li {
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  
+  .nav-links li.active {
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .search-box input {
+    width: 150px; 
+  }
+  .resume-builder-btn {
+
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 1rem;
+    width: 120px;
+  }
+  .sidebar {
+    flex: 0 0 270px;
+  }
+  .profile-pic-large {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
   .main-content {
     flex-direction: column;
   }
   
   .sidebar {
     flex: 0 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     width: 100%;
   }
-  
+
   .profile-card {
     max-width: 100%;
   }
-  
-}
-
-@media (max-width: 992px) {
   .search-inputs {
     flex-direction: column;
   }
   
-  .job-cards {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
+  .welcome-section {
+    margin-top: 0;
   
-}
-
-@media (max-width: 768px) {
+  }
   .navbar {
     padding: 0.8rem 1.5rem;
   }
@@ -798,8 +840,6 @@ margin-top: 30px;
   .resume-builder-btn {
     display: none;
   }
-
-  /* Add Resume Builder to mobile menu */
   .mobile-resume-builder {
     display: block;
     margin: 1rem 0;
@@ -853,25 +893,13 @@ margin-top: 30px;
 
   .tags {
     flex-wrap: wrap;
+    gap: 0.3rem;
   }
 
   .job-card {
     padding: 12px;
   }
 
-  .job-actions {
-    flex-direction: column;
-  }
-
-  .apply-btn {
-    width: 100%;
-    max-width: 100% !important;
-    margin-bottom: 0.5rem;
-  }
-
-  .save-btn {
-    align-self: flex-end;
-  }
 
   .profile-pic-large {
     left: 50%;
