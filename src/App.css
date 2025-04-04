@@ -44,6 +44,7 @@
   src: url('./assets/fonts/NeueHaasDisplayLight.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
@@ -51,6 +52,7 @@
   src: url('./assets/fonts/NeueHaasDisplayLightItalic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap; 
 }
 
 @font-face {
@@ -58,6 +60,7 @@
   src: url('./assets/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
@@ -65,6 +68,7 @@
   src: url('./assets/fonts/NeueHaasDisplayRomanItalic.ttf') format('truetype');
   font-weight: 500;
   font-style: italic;
+  font-display: swap; 
 }
 
 @font-face {
@@ -72,6 +76,7 @@
   src: url('./assets/fonts/NeueHaasDisplayMedium.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
@@ -79,6 +84,7 @@
   src: url('./assets/fonts/NeueHaasDisplayMediumItalic.ttf') format('truetype');
   font-weight: 600;
   font-style: italic;
+  font-display: swap; 
 }
 
 @font-face {
@@ -86,6 +92,7 @@
   src: url('./assets/fonts/NeueHaasDisplayBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
@@ -93,6 +100,7 @@
   src: url('./assets/fonts/NeueHaasDisplayBoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap; 
 }
 
 @font-face {
@@ -100,6 +108,7 @@
   src: url('./assets/fonts/NeueHaasDisplayBlack.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
@@ -107,6 +116,7 @@
   src: url('./assets/fonts/NeueHaasDisplayBlackItalic.ttf') format('truetype');
   font-weight: 800;
   font-style: italic;
+  font-display: swap; 
 }
 
 body {
@@ -185,7 +195,13 @@ body {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
+.profile-pic img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
 .mobile-menu {
   display: none;
   position: fixed;

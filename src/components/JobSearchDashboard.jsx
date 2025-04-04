@@ -61,7 +61,7 @@ const JobSearchDashboard = () => {
           </div>
           <button className="resume-builder-btn">Resume Builder</button>
           <div className="profile-pic">
-            <img src={profile} alt="Profile" />
+            <img src={profile} alt="Profile"  loading="lazy"  />
           </div>
           <div className="hamburger" onClick={toggleMobileMenu}>
           {mobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={30} />}
